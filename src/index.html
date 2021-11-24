@@ -13,7 +13,9 @@
 
     <script>
         const url = "DUMMY_SPRING_BOOT_URL"
-        fetch(`${url}/api/v1/dummy`).then(data => data.text()).then(msg =>  document.getElementById("dummy-spring-boot-message").textContent = msg)
+        fetch(`${url}/api/v1/dummy`)
+            .then(data => data.text())
+            .then(msg => document.getElementById("dummy-spring-boot-message").textContent = msg)
     </script>
 </body>
 
