@@ -1,1 +1,20 @@
-Hello World!
+<!doctype html>
+<html>
+
+<head>
+    <title>This is the title of the webpage!</title>
+</head>
+
+<body>
+
+    <p>Hello World</p>
+    <p>Message from dummy-spring-boot:
+        <b id="dummy-spring-boot-message"></b></p>
+
+    <script>
+        const url = "http://localhost:8080"
+        fetch(`${url}/api/v1/dummy`).then(data => data.text()).then(msg =>  document.getElementById("dummy-spring-boot-message").textContent = msg)
+    </script>
+</body>
+
+</html>
