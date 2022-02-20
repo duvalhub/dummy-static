@@ -1,6 +1,21 @@
-@Library([
-    'continuous-deployment-library@master', 
-    'shared-library@feature/nginx-using-config-server'
-]) _
+pipeline {
+    agent any
 
-continuousDeployment()
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
